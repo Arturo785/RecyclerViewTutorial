@@ -1,4 +1,4 @@
-package com.example.recyclerviewdemo
+package com.example.recyclerviewdemo.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerviewdemo.R
+import com.example.recyclerviewdemo.data.ExampleItemData
 import kotlinx.android.synthetic.main.example_item.view.*
 
 class AdapterOne(private val exampleList: List<ExampleItemData>) : RecyclerView.Adapter<AdapterOne.AdapterOneViewHolder>(){

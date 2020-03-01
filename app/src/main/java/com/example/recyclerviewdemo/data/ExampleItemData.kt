@@ -1,4 +1,4 @@
-package com.example.recyclerviewdemo
+package com.example.recyclerviewdemo.data
 
 data class ExampleItemData(
     val imageResource : Int,
