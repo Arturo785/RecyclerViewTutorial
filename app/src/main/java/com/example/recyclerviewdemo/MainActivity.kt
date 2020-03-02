@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), AdapterWIthTemplate.Interaction {
         main_recycler_view.setHasFixedSize(true)*/
 
         //This is the one with the template
-        templateAdapter = AdapterWIthTemplate()
+        templateAdapter = AdapterWIthTemplate(this)
         main_recycler_view.layoutManager = LinearLayoutManager(this)
         main_recycler_view.setHasFixedSize(true)
         templateAdapter.submitList(exampleList) // sends the list to the adapter
