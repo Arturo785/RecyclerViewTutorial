@@ -34,6 +34,7 @@ class ListFragment : Fragment(), AdapterWIthTemplate.Interaction {
        // Toast.makeText(context,"clicked $position", Toast.LENGTH_SHORT).show()
         val direction : NavDirections = ListFragmentDirections.actionListFragmentToDetailFragment(item)
 
+        //every shared needs an unique name
         val extras = FragmentNavigatorExtras(
             image to "image ${item.firstText}",
             title to item.firstText

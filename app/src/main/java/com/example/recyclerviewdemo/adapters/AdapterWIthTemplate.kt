@@ -70,6 +70,7 @@ class AdapterWIthTemplate(private val interaction: Interaction? = null) :
             itemView.text_view_2_recycler_item.text = item.SecondText
 
             //Transitions
+            //every shared needs an unique name
             itemView.image_view_recycler_item.transitionName = "image ${item.firstText}"
             itemView.text_view_recycler_item.transitionName = item.firstText
 
