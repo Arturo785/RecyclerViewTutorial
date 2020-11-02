@@ -4,6 +4,8 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import com.example.recyclerviewdemo.R
@@ -62,18 +64,24 @@ class AdapterWIthTemplate(private val interaction: Interaction? = null) :
     ) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: ExampleItemData) = with(itemView) {
-            itemView.setOnClickListener {
-                interaction?.onItemSelected(adapterPosition, item)
-            }
 
             itemView.image_view_recycler_item.setImageResource(item.imageResource)
             itemView.text_view_recycler_item.text = item.firstText
             itemView.text_view_2_recycler_item.text = item.SecondText
 
+            //Transitions
+            //every shared needs an unique name
+            itemView.image_view_recycler_item.transitionName = "image ${item.firstText}"
+            itemView.text_view_recycler_item.transitionName = item.firstText
+
+            itemView.setOnClickListener {
+                interaction?.onItemSelected(adapterPosition, item, image_view_recycler_item, text_view_recycler_item)
+            }
+
         }
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: ExampleItemData)
+        fun onItemSelected(position: Int, item: ExampleItemData, image : ImageView, title : TextView)
     }
 }
