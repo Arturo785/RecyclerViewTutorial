@@ -8,3 +8,4 @@ and Kotlin RecyclerView Template (DiffUtil and AsyncListDiffer) : Coding with Mi
 https://www.codexpedia.com/android/android-recyclerview-multiple-layout-sealed-class/
 to use more than one viewType
 
+*Addition of sharedElements for better UI-UX and navigation component for easier navigation between screens
